@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chatwoot Widget Local Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            margin: 2rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chatwoot Widget Local Test</h1>
+
+    <script>
+        (function (d, t) {
+            var BASE_URL = "https://chat.nrit.ucar.edu";
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            g.src = BASE_URL + "/packs/js/sdk.js";
+            g.async = true;
+            s.parentNode.insertBefore(g, s);
+            g.onload = function () {
+                window.chatwootSDK.run({
+                    websiteToken: 'AHUU8mVMygzrBRS73PsiVmkQ',
+                    baseUrl: BASE_URL
+                })
+            }
+        })(document, "script");
+    </script>
+
+
+
+</body>
+
+</html>
